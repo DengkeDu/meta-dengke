@@ -5,7 +5,7 @@ IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} openssh dnf 
 		 util-linux coreutils binutils gcc gdb autoconf automake \
 		 gstreamer1.0 gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-vaapi gstreamer1.0-rtsp-server \
 		 gstreamer1.0-rtsp-server-apps \
-		 lsof net-tools glibc-binaries vim git kmod procps usbutils pciutils iw"
+		 lsof net-tools glibc-binaries vim git kmod procps usbutils pciutils iw python-setuptools"
 
 IMAGE_LINGUAS = " "
 
@@ -17,5 +17,9 @@ IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE_append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "" ,d)}"
 LICENSE_FLAGS_WHITELIST = "commercial"
 DISTRO_FEATURES_append = " pam"
+
+# add the following to conf/local.conf
 VIDEO_CAMERA = "1"
 GPU_MEM_512 = "1"
+ENABLE_UART = "1"
+ENABLE_DWC2_PERIPHERAL = "1"
