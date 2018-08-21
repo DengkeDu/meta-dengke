@@ -10,14 +10,6 @@ inherit core-image
 
 IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE_append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "" ,d)}"
-LICENSE_FLAGS_WHITELIST = "commercial"
-DISTRO_FEATURES_append = " pam"
-
-# add the following to conf/local.conf
-VIDEO_CAMERA = "1"
-GPU_MEM_512 = "1"
-ENABLE_UART = "1"
-ENABLE_DWC2_PERIPHERAL = "1"
 
 IMAGE_INSTALL += " \ 
         kernel-modules \
@@ -55,3 +47,10 @@ IMAGE_INSTALL += " \
 	python-setuptools \
 	dnf \
         "
+# We shouldn't not placed IMAGE_FEATURE and DISTRO_FEATURE in this file, those should be in conf/local.conf
+# LICENSE_FLAGS_WHITELIST="commercial"
+# VIDEO_CAMERA = "1" 
+# GPU_MEM_512 = "1" 
+# ENABLE_UART = "1" 
+# BB_NUMBER_THREADS = "20"
+# IMAGE_FEATURES_append = " package-management ssh-server-openssh"
