@@ -24,7 +24,7 @@ RDEPENDS_${PN} += "python-apipkg"
 # WARNING: the following rdepends are determined through basic analysis of the
 # python sources, and might not be 100% accurate.
 RDEPENDS_${PN} += "python-apipkg python-core python-crypt python-ctypes python-io python-lang python-shell python-subprocess python-textutils python-threading"
-DEPENDS += "setuptools-scm-native"
+DEPENDS += "python-setuptools-scm-native"
 
 # WARNING: We were unable to map the following python package/module
 # dependencies to the bitbake packages which include them:

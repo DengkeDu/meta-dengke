@@ -20,7 +20,7 @@ inherit pypi setuptools
 # WARNING: the following rdepends are determined through basic analysis of the
 # python sources, and might not be 100% accurate.
 RDEPENDS_${PN} += "python-core python-subprocess"
-DEPENDS += "setuptools-scm-native"
+DEPENDS += "python-setuptools-scm-native"
 
 # WARNING: We were unable to map the following python package/module
 # dependencies to the bitbake packages which include them:
