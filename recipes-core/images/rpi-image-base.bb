@@ -24,16 +24,6 @@ IMAGE_INSTALL += " \
 	gdb \
 	autoconf \
 	automake \
-	gstreamer1.0 \
-	gstreamer1.0-libav \
-	gstreamer1.0-plugins-bad \
-	gstreamer1.0-plugins-good \
-	gstreamer1.0-vaapi \
-	gstreamer1.0-rtsp-server \
-	gstreamer1.0-rtsp-server-apps \
-	gstreamer1.0-plugins-base \
-	gstreamer1.0-plugins-ugly \
-	gstreamer1.0-python \
 	lsof \
 	net-tools \
 	glibc-binaries \
